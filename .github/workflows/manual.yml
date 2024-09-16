@@ -36,6 +36,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        source: "logo.png"
+        source: "./logo.png"
         target: /var/www/planka/public
         debug: true
