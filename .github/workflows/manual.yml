@@ -30,12 +30,10 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       # run: echo "Hello ${{ inputs.name }}"
-      uses: appleboy/scp-action@v0.1.7
+      uses: garygrossgarten/github-action-scp@release
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        source: "./logo.png"
-        target: "/var/www/planka/public"
-        debug: true
+        local: "./logo.png"
+        remote: "/var/www/planka/public"
