@@ -30,10 +30,10 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       # run: echo "Hello ${{ inputs.name }}"
-      uses: garygrossgarten/github-action-scp@release
+      uses: cross-the-world/ssh-scp-ssh-pipelines@latest
       with:
         host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        local: "/logo.png"
-        remote: "/var/www/planka/public"
+        user: ${{ secrets.USERNAME }}
+        pass: ${{ secrets.PASSWORD }}
+        scp: |
+          './logo.png' => "/var/www/planka/public/"
