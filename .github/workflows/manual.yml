@@ -36,4 +36,4 @@ jobs:
         user: ${{ secrets.USERNAME }}
         pass: ${{ secrets.PASSWORD }}
         scp: |
-          './logo.png' => "/var/www/planka/public/"
+          'logo.png' => "/var/www/planka/public"
